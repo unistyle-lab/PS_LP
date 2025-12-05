@@ -67,6 +67,7 @@ header {
 
 main {
   @include font-noto(400);
+  color: $black;
   width: 100vw;
   background: white;
 
@@ -80,6 +81,7 @@ main {
     max-width: 1512px;
     margin: 0 auto;
     position: relative;
+    padding-bottom: 130px;
 
     .fv_bg {
       position: absolute;
@@ -168,6 +170,199 @@ main {
         .orange_button {
           @include orange_button();
         }
+      }
+    }
+  }
+
+  #merit {
+    width: 100%;
+    padding-bottom: 150px;
+
+    .merit_wrapper {
+      width: 100%;
+      max-width: 1512px;
+      margin: 0 auto;
+
+      .section_title {
+        @include section_title();
+        padding-bottom: 75px;
+      }
+
+      .merit_content {
+        width: clamp(1100px, 415.862px + 53.448vw, 1224px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .merit_block {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          gap: 50px;
+
+          &:nth-child(even) {
+              .text_block {
+                order: 3;
+              }
+          }
+
+          .text_block {
+            order: 1;
+            width: 53%;
+
+            .num {
+              display: inline-flex;
+              flex-direction: column;
+              align-items: center;
+
+              span {
+                width: fit-content;
+                @include font-roboto(500);
+                font-size: 24px;
+                letter-spacing: 3.84px;
+                opacity: 0.6;
+                background: linear-gradient(270deg, #9FDBFA 0%, #59B9ED 49.04%, #1698E1 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              }
+
+              .number {
+                width: fit-content;
+                color: $blue;
+                font-size: 87px;
+                line-height: 85%;
+              }
+            }
+
+            .sub_title {
+              background: white;
+              box-shadow: 0 4px 7px 0 rgba(0, 163, 217, 0.20);
+              padding: 16px 24px;
+              justify-content: center;
+              align-items: center;
+              display: flex;
+
+              p {
+                color: $blue;
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 1.44px;
+              }
+            }
+
+            .text {
+              padding-top: 30px;
+              font-size: 18px;
+              line-height: 35px;
+
+              span {
+                font-weight: 700;
+                background: linear-gradient(transparent 60%, #FFE88B 60%);
+              }
+            }
+          }
+
+          .img_block {
+            order: 2;
+            width: 47%;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #advertisement {
+    width: 100%;
+    padding-bottom: 150px;
+
+    .advertisement_wrapper {
+      width: 100%;
+      max-width: 1512px;
+      margin: 0 auto;
+
+      .section_title {
+        @include section_title();
+      }
+    }
+  }
+
+  #member {
+    width: 100%;
+    padding-bottom: 150px;
+
+    .member_wrapper {
+      width: 100%;
+      max-width: 1512px;
+      margin: 0 auto;
+
+      .section_title {
+        @include section_title();
+      }
+    }
+  }
+
+  #voice {
+    width: 100%;
+    padding-bottom: 150px;
+
+    .voice_wrapper {
+      width: 100%;
+      max-width: 1512px;
+      margin: 0 auto;
+
+      .section_title {
+        @include section_title();
+      }
+    }
+  }
+
+  #youtube {
+    width: 100%;
+    padding-bottom: 150px;
+
+    .youtube_wrapper {
+      width: 100%;
+      max-width: 1512px;
+      margin: 0 auto;
+
+      .section_title {
+        @include section_title();
+      }
+    }
+  }
+
+  #qa {
+    width: 100%;
+    padding-bottom: 150px;
+
+    .qa_wrapper {
+      width: 100%;
+      max-width: 1512px;
+      margin: 0 auto;
+
+      .section_title {
+        @include section_title();
+      }
+    }
+  }
+
+  #contact {
+    width: 100%;
+    padding-bottom: 150px;
+
+    .contact_wrapper {
+      width: 100%;
+      max-width: 1512px;
+      margin: 0 auto;
+
+      .section_title {
+        @include section_title();
       }
     }
   }

@@ -25,6 +25,32 @@
   font-weight: $weight;
 }
 
+@mixin section_title() {
+  width: 100%;
+  justify-items: center;
+
+  h2 {
+    color: $blue;
+    @include font-roboto(400);
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  h1 {
+    color: $black;
+    @include font-noto(500);
+    text-align: center;
+    font-size: 48px;
+    line-height: 150%;
+
+    span {
+      color: $blue;
+      font-size: 96px;
+      font-weight: 600;
+    }
+  }
+}
+
 @mixin orange_button() {
   position: relative;
   width: 457px;
