@@ -1,0 +1,174 @@
+@import "assets/scss/mixin";
+@import "assets/scss/variable";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0 !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100svh;
+}
+
+img,
+label {
+  display: inline-block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  @include font-noto(400);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  color: $black;
+
+  .header_wrapper {
+    max-width: 1512px;
+    width: 100%;
+    height: 98px;
+    margin: 0 auto;
+    background: white;
+    align-content: center;
+
+    .logo {
+      display: block;
+      width: 215px;
+      height: 45px;
+      margin-left: 75px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+main {
+  @include font-noto(400);
+  width: 100vw;
+  background: white;
+
+  .header_padding {
+    width: 100%;
+    height: 98px;
+  }
+
+  #fv {
+    width: 100%;
+    max-width: 1512px;
+    margin: 0 auto;
+    position: relative;
+
+    .fv_bg {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .fv_wrapper {
+      position: relative;
+      z-index: 2;
+      margin-left: min(200px, 13.2vw);
+      padding-top: clamp(85px, 38.548px + 6.048vw, 130px);
+
+      .fv_title {
+        position: relative;
+        margin-bottom: min(3.3vw, 50px);
+
+        .absolute {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(-13%, calc(-100% - 15px));
+          width: min(500px, 33vw);
+
+          img {
+            width: 100%;
+          }
+        }
+
+        img {
+          width: 50vw;
+          max-width: 760px;
+        }
+      }
+
+      .fv_info {
+        display: flex;
+        gap: 35px;
+        padding-bottom: 50px;
+
+        @include tb() {
+          padding-bottom: 20px;
+        }
+
+        .frame_contents {
+          display: flex;
+          gap: 20px;
+
+          img {
+            width: min(205px, 13.6vw);
+            height: min(205px, 13.6vw);
+          }
+        }
+
+        .map_block {
+          position: relative;
+          width: min(453px, 30vw);
+
+          .map {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+          }
+
+          .absolute {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      .fv_contact {
+        width: 100%;
+        justify-items: center;
+
+        .orange_button {
+          @include orange_button();
+        }
+      }
+    }
+  }
+}

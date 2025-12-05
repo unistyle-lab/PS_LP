@@ -1,0 +1,66 @@
+
+
+@mixin sp {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+// weight: 100-900
+@mixin font-noto($weight) {
+  font-family: "Noto Sans JP", serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+}
+
+@mixin font-roboto($weight) {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+}
+
+@mixin orange_button() {
+  position: relative;
+  width: 457px;
+  height: 84px;
+  border-radius: 45px;
+  box-shadow: 0 2.71px 2.71px 0 rgba(0, 0, 0, 0.25);
+  background: linear-gradient(90deg, #FD8D00 0%, #FC9D01 44.5%, #FBA801 100%);
+  align-content: center;
+
+  @include tb() {
+    width: 360px;
+    height: 50px;
+  }
+
+  span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    font-size: 21.677px;
+    font-weight: 700;
+
+    @include tb() {
+      font-size: 18px;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+
+    @include tb() {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
